@@ -1,6 +1,7 @@
-NOTE: The validation data includes 141 images that the model has never seen and 488 images that it was trained on. I'm aware that this is not proper way to benchmark it. But since 
-the scene in our lab will look the same always, I think it's good enough. I'm trying to just make it work for me. we can make it proper and better later, if need be. all ran on ashik's
+NOTE: The validation data includes 141 images that the model has never seen and 488 images that it was trained on. I'm aware that this is not a proper way to benchmark it. But since 
+the scene in our lab will always look the same, I think it's good enough. I'm trying to just make it work for me. We can make it proper and better later, if need be. all ran on ashik's 
 laptop.
+
 
 model                                         dataset_version           device     weights_type  precision     recall      mAP50     mAP50-95   prep(ms)  infer(ms)   post(ms)  total(ms)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
