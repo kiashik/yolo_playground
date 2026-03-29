@@ -1,0 +1,10 @@
+model                                         dataset_version           device     weights_type  precision     recall      mAP50     mAP50-95   prep(ms)  infer(ms)   post(ms)  total(ms)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+yolo26n_my_ds_v2_best.pt                      Tennis-ball-in-lab-4      cuda:0     best           0.970260   0.969365   0.990273     0.688063      0.931      3.364      0.237      4.531
+yolo26n_my_ds_v2_last.pt                      Tennis-ball-in-lab-4      cuda:0     last           0.984118   0.958425   0.990512     0.687292      0.916      3.384      0.201      4.502
+yolo26n_my_ds_v2_best.onnx                    Tennis-ball-in-lab-4      cuda:0     best           0.978730   0.960613   0.987429     0.677232      0.870      6.846      0.281      7.998
+yolo26n_my_ds_v2_last.onnx                    Tennis-ball-in-lab-4      cuda:0     last           0.981612   0.947484   0.984879     0.668661      0.940      7.248      0.300      8.489
+yolo26n_my_ds_v2_best_openvino_model          Tennis-ball-in-lab-4      cuda:0     best                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo26n_my_ds_v2_last_openvino_model          Tennis-ball-in-lab-4      cuda:0     last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo26n_my_ds_v2_best.engine                  Tennis-ball-in-lab-4      cuda:0     best           0.978094   0.960613   0.987454     0.677247      0.664      2.486      0.184      3.334
+yolo26n_my_ds_v2_last.engine                  Tennis-ball-in-lab-4      cuda:0     last           0.979648   0.947940   0.984929     0.668823      0.683      2.569      0.239      3.492

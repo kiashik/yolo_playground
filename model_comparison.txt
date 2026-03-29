@@ -1,0 +1,58 @@
+NOTE: The validation data includes 141 images that the model has never seen and 488 images that it was trained on. I'm aware that this is not proper way to benchmark it. But since 
+the scene in our lab will look the same always, I think it's good enough. I'm trying to just make it work for me. we can make it proper and better later, if need be. all ran on ashik's
+laptop.
+
+model                                         dataset_version           device     weights_type  precision     recall      mAP50     mAP50-95   prep(ms)  infer(ms)   post(ms)  total(ms)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# YOLO26N on my data++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+yolo26n_my_ds_v2_best.pt                      Tennis-ball-in-lab-4      cpu        best           0.969833   0.969365   0.990273     0.688147      1.551     64.592      0.033     66.176
+yolo26n_my_ds_v2_last.pt                      Tennis-ball-in-lab-4      cpu        last           0.984212   0.958425   0.990532     0.687849      2.070     65.991      0.043     68.104
+yolo26n_my_ds_v2_best.onnx                    Tennis-ball-in-lab-4      cpu        best           0.977343   0.960613   0.987457     0.677298     10.535     35.439      0.156     46.130
+yolo26n_my_ds_v2_last.onnx                    Tennis-ball-in-lab-4      cpu        last           0.979639   0.947540   0.984902     0.668644     10.693     36.607      0.168     47.468
+yolo26n_my_ds_v2_best_openvino_model          Tennis-ball-in-lab-4      cpu        best           0.977344   0.960613   0.987457     0.677298      0.843     16.955      0.161     17.959
+yolo26n_my_ds_v2_last_openvino_model          Tennis-ball-in-lab-4      cpu        last           0.979639   0.947540   0.984902     0.668644      0.832     16.245      0.160     17.237
+yolo26n_my_ds_v2_best.engine                  Tennis-ball-in-lab-4      cpu        best                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo26n_my_ds_v2_last.engine                  Tennis-ball-in-lab-4      cpu        last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+
+yolo26n_my_ds_v2_best.pt                      Tennis-ball-in-lab-4      cuda:0     best           0.970260   0.969365   0.990273     0.688063      0.931      3.364      0.237      4.531
+yolo26n_my_ds_v2_last.pt                      Tennis-ball-in-lab-4      cuda:0     last           0.984118   0.958425   0.990512     0.687292      0.916      3.384      0.201      4.502
+yolo26n_my_ds_v2_best.onnx                    Tennis-ball-in-lab-4      cuda:0     best           0.978730   0.960613   0.987429     0.677232      0.870      6.846      0.281      7.998
+yolo26n_my_ds_v2_last.onnx                    Tennis-ball-in-lab-4      cuda:0     last           0.981612   0.947484   0.984879     0.668661      0.940      7.248      0.300      8.489
+yolo26n_my_ds_v2_best_openvino_model          Tennis-ball-in-lab-4      cuda:0     best                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo26n_my_ds_v2_last_openvino_model          Tennis-ball-in-lab-4      cuda:0     last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo26n_my_ds_v2_best.engine                  Tennis-ball-in-lab-4      cuda:0     best           0.978094   0.960613   0.987454     0.677247      0.664      2.486      0.184      3.334
+yolo26n_my_ds_v2_last.engine                  Tennis-ball-in-lab-4      cuda:0     last           0.979648   0.947940   0.984929     0.668823      0.683      2.569      0.239      3.492
+
+# YOLO11N on my data ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+yolo11n_my_ds_v2_best.pt                      Tennis-ball-in-lab-4_11n  cpu        best           0.966874   0.923414   0.971217     0.653523      2.084     69.545      0.518     72.147
+yolo11n_my_ds_v2_last.pt                      Tennis-ball-in-lab-4_11n  cpu        last           0.986674   0.923414   0.975670     0.661092      2.030     69.511      0.202     71.743
+yolo11n_my_ds_v2_best.onnx                    Tennis-ball-in-lab-4_11n  cpu        best           0.980108   0.908096   0.961121     0.650551      4.343     49.691      9.118     63.151
+yolo11n_my_ds_v2_last.onnx                    Tennis-ball-in-lab-4_11n  cpu        last           0.976749   0.919246   0.971766     0.658860      4.732     54.223      9.874     68.830
+yolo11n_my_ds_v2_best_openvino_model          Tennis-ball-in-lab-4_11n  cpu        best           0.980108   0.908096   0.961121     0.650551      0.815     19.237      0.668     20.720
+yolo11n_my_ds_v2_last_openvino_model          Tennis-ball-in-lab-4_11n  cpu        last           0.976749   0.919247   0.971766     0.658860      0.851     18.857      0.719     20.427
+yolo11n_my_ds_v2_best.engine                  Tennis-ball-in-lab-4_11n  cpu        best                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo11n_my_ds_v2_last.engine                  Tennis-ball-in-lab-4_11n  cpu        last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+
+yolo11n_my_ds_v2_best.pt                      Tennis-ball-in-lab-4_11n  cuda:0     best           0.967925   0.924468   0.971240     0.653616      0.883      3.549      0.581      5.013
+yolo11n_my_ds_v2_last.pt                      Tennis-ball-in-lab-4_11n  cuda:0     last           0.986675   0.923414   0.975656     0.661102      1.123      3.188      0.714      5.025
+yolo11n_my_ds_v2_best.onnx                    Tennis-ball-in-lab-4_11n  cuda:0     best           0.980102   0.908096   0.961185     0.650431      0.803      6.032      1.078      7.912
+yolo11n_my_ds_v2_last.onnx                    Tennis-ball-in-lab-4_11n  cuda:0     last           0.972639   0.923414   0.971702     0.658787      0.789      5.734      1.043      7.566
+yolo11n_my_ds_v2_best_openvino_model          Tennis-ball-in-lab-4_11n  cuda:0     best                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo11n_my_ds_v2_last_openvino_model          Tennis-ball-in-lab-4_11n  cuda:0     last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo11n_my_ds_v2_best.engine                  Tennis-ball-in-lab-4_11n  cuda:0     best           0.979934   0.908096   0.961186     0.649984      0.633      2.574      0.824      4.031
+yolo11n_my_ds_v2_last.engine                  Tennis-ball-in-lab-4_11n  cuda:0     last           0.976425   0.919037   0.971814     0.658891      0.674      2.546      0.789      4.008
+
+# YOLO11N on public data ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+yolo11n_last_tennis_ball_eudyi_xwxjf.pt       Tennis-ball-in-lab-4_11n  cpu        last           0.534107   0.408898   0.394938     0.182492      2.278     72.605      0.809     75.692
+yolo11n_last_tennis_ball_eudyi_xwxjf.onnx     Tennis-ball-in-lab-4_11n  cpu        last           0.657979   0.395705   0.451306     0.204356      4.663     50.252      9.148     64.063
+yolo11n_last_te..._eudyi_xwxjf_openvino_model Tennis-ball-in-lab-4_11n  cpu        last           0.657979   0.395705   0.451306     0.204356      0.831     19.064      0.661     20.556
+yolo11n_last_tennis_ball_eudyi_xwxjf.engine   Tennis-ball-in-lab-4_11n  cpu        last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+
+yolo11n_last_tennis_ball_eudyi_xwxjf.pt       Tennis-ball-in-lab-4_11n  cuda:0     last           0.534066   0.408831   0.395081     0.182878      0.947      3.319      0.540      4.805
+yolo11n_last_tennis_ball_eudyi_xwxjf.onnx     Tennis-ball-in-lab-4_11n  cuda:0     last           0.657503   0.394871   0.451560     0.204430      0.650      4.916      0.825      6.391
+yolo11n_last_te..._eudyi_xwxjf_openvino_model Tennis-ball-in-lab-4_11n  cuda:0     last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo11n_last_tennis_ball_eudyi_xwxjf.engine   Tennis-ball-in-lab-4_11n  cuda:0     last           0.657571   0.393873   0.451357     0.204118      0.661      2.548      0.804      4.013
+
+
+CONCLUSION:
+No noticable differnce in accuracy between cpu and gpu or model format. using our own data made the accuracy much better. engine is fastest on GPU, openvino fasted on cpu.
