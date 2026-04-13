@@ -90,9 +90,9 @@ def perform_validation(models, data_yaml, device):
                 ])
 
     if device=="cpu":
-        txt_name = f"model_comparison_cpu.txt"
+        txt_name = f"model_comparison_cpu_proper_legion.txt"
     elif device.startswith("cuda"):
-        txt_name = f"model_comparison_{device.replace(':', '_')}.txt"
+        txt_name = f"model_comparison_{device.replace(':', '_')}_proper_legion.txt"
     
     with open(txt_name, "w") as f:
         f.write(
@@ -228,7 +228,7 @@ if __name__ == "__main__":
     ]
 
     # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    # data_yaml = "Tennis-ball-in-lab-4_26n/data.yaml"    
+    # data_yaml = "tennis-ball-validation-1_26/data.yaml"    
     # print("\n=== Validating YOLO26n on CUDA ===")
     # perform_validation(my_models_26n, data_yaml, "cuda:0")
     # print("\n=== Validating YOLO26n on CPU ===")
@@ -236,10 +236,10 @@ if __name__ == "__main__":
     # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-    # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    data_yaml = "Tennis-ball-in-lab-4_11n/data.yaml"    
-    print("\n=== Validating YOLO11n on CUDA ===")
-    perform_validation(my_models_11n, data_yaml, "cuda:0")
+    # # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    data_yaml = "tennis-ball-validation-1_11/data.yaml"    
+    # print("\n=== Validating YOLO11n on CUDA ===")
+    # perform_validation(my_models_11n, data_yaml, "cuda:0")
     print("\n=== Validating YOLO11n on CPU ===")
     perform_validation(my_models_11n, data_yaml, "cpu")
-    # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    # # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
