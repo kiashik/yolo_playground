@@ -1,0 +1,66 @@
+This is the validation results ran on images that the model never saw before. The validation was ran on Ashik's Legion 7 Slim.
+- P (Precision): The accuracy of the detected objects, indicating how many detections were correct.
+- R (Recall): The ability of the model to identify all instances of objects in the images.
+- mAP50: Mean average precision calculated at an intersection over union (IoU) threshold of 0.50. It's a measure of the model's accuracy considering only the "easy" detections.
+- mAP50-95: The average of the mean average precision calculated at varying IoU thresholds, ranging from 0.50 to 0.95. It gives a comprehensive view of the model's performance 
+    across different levels of detection difficulty.
+
+
+
+model                                         dataset_version           device     weights_type  precision     recall      mAP50     mAP50-95   prep(ms)  infer(ms)   post(ms)  total(ms)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# YOLO26N on my data ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+yolo26n_my_ds_v2_best.pt                      tennis-ball-validation-1_26 cpu        best           0.972430   0.924731   0.987179     0.673462      0.875     35.518      0.295     36.688
+yolo26n_my_ds_v2_last.pt                      tennis-ball-validation-1_26 cpu        last           0.957364   0.962366   0.990900     0.669972      1.093     34.858      0.445     36.396
+yolo26n_my_ds_v2_best.onnx                    tennis-ball-validation-1_26 cpu        best           0.957190   0.962366   0.990065     0.666265     12.391     47.368      0.151     59.910
+yolo26n_my_ds_v2_last.onnx                    tennis-ball-validation-1_26 cpu        last           0.967595   0.963220   0.991893     0.663362     11.820     46.898      0.146     58.864
+yolo26n_my_ds_v2_best_openvino_model          tennis-ball-validation-1_26 cpu        best           0.957190   0.962366   0.990065     0.666265      0.830     17.949      0.156     18.936
+yolo26n_my_ds_v2_last_openvino_model          tennis-ball-validation-1_26 cpu        last           0.967595   0.963220   0.991893     0.663362      0.775     17.241      0.157     18.173
+yolo26n_my_ds_v2_best.engine                  tennis-ball-validation-1_26 cpu        best                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo26n_my_ds_v2_last.engine                  tennis-ball-validation-1_26 cpu        last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+
+
+yolo26n_my_ds_v2_best.pt                      tennis-ball-validation-1_26 cuda:0     best           0.972571   0.924731   0.987138     0.673360      0.844      2.929      0.303      4.076
+yolo26n_my_ds_v2_last.pt                      tennis-ball-validation-1_26 cuda:0     last           0.956705   0.962366   0.990813     0.669904      0.749      2.474      0.451      3.674
+yolo26n_my_ds_v2_best.onnx                    tennis-ball-validation-1_26 cuda:0     best           0.957067   0.958817   0.990015     0.666262      0.759      6.366      0.229      7.354
+yolo26n_my_ds_v2_last.onnx                    tennis-ball-validation-1_26 cuda:0     last           0.967597   0.963281   0.991893     0.663364      0.772      6.377      0.206      7.356
+yolo26n_my_ds_v2_best_openvino_model          tennis-ball-validation-1_26 cuda:0     best                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo26n_my_ds_v2_last_openvino_model          tennis-ball-validation-1_26 cuda:0     last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo26n_my_ds_v2_best.engine                  tennis-ball-validation-1_26 cuda:0     best           0.957019   0.957674   0.990021     0.665944      0.709      2.620      0.189      3.518
+yolo26n_my_ds_v2_last.engine                  tennis-ball-validation-1_26 cuda:0     last           0.967595   0.963211   0.991893     0.663055      0.630      2.604      0.167      3.402
+
+
+# YOLO11N on my data ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+yolo11n_my_ds_v2_best.pt                      tennis-ball-validation-1_11 cpu        best           0.988558   0.983871   0.987009     0.656526      0.853     36.682      0.168     37.704
+yolo11n_my_ds_v2_last.pt                      tennis-ball-validation-1_11 cpu        last           0.987177   0.973118   0.987808     0.659744      1.200     36.338      1.126     38.664
+yolo11n_my_ds_v2_best.onnx                    tennis-ball-validation-1_11 cpu        best           0.989170   0.982126   0.986889     0.617362      2.927     51.192      9.834     63.953
+yolo11n_my_ds_v2_last.onnx                    tennis-ball-validation-1_11 cpu        last           0.993053   0.973118   0.987978     0.629643      3.915     48.090      7.982     59.987
+yolo11n_my_ds_v2_best_openvino_model          tennis-ball-validation-1_11 cpu        best           0.989170   0.982126   0.986889     0.617362      1.209     20.386      0.689     22.284
+yolo11n_my_ds_v2_last_openvino_model          tennis-ball-validation-1_11 cpu        last           0.993053   0.973118   0.987978     0.629647      0.811     18.998      0.667     20.476
+yolo11n_my_ds_v2_best.engine                  tennis-ball-validation-1_11 cpu        best                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo11n_my_ds_v2_last.engine                  tennis-ball-validation-1_11 cpu        last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+
+yolo11n_my_ds_v2_best.pt                      tennis-ball-validation-1_11 cuda:0     best           0.988533   0.983871   0.987001     0.656526      1.183      2.525      0.905      4.613
+yolo11n_my_ds_v2_last.pt                      tennis-ball-validation-1_11 cuda:0     last           0.987193   0.973118   0.987798     0.659611      1.312      2.231      1.432      4.975
+yolo11n_my_ds_v2_best.onnx                    tennis-ball-validation-1_11 cuda:0     best           0.989170   0.982128   0.986883     0.617369      0.869      7.686      1.320      9.875
+yolo11n_my_ds_v2_last.onnx                    tennis-ball-validation-1_11 cuda:0     last           0.993139   0.973118   0.987963     0.628270      0.827      6.910      1.171      8.908
+yolo11n_my_ds_v2_best_openvino_model          tennis-ball-validation-1_11 cuda:0     best                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo11n_my_ds_v2_last_openvino_model          tennis-ball-validation-1_11 cuda:0     last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo11n_my_ds_v2_best.engine                  tennis-ball-validation-1_11 cuda:0     best           0.989170   0.982150   0.986889     0.617998      0.734      2.839      0.958      4.531
+yolo11n_my_ds_v2_last.engine                  tennis-ball-validation-1_11 cuda:0     last           0.992811   0.973118   0.988011     0.628468      0.749      2.891      1.028      4.667
+
+
+# YOLO11N on public data ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+yolo11n_last_tennis_ball_eudyi_xwxjf.pt       tennis-ball-validation-1_11 cpu        last           0.977307   0.926165   0.971747     0.647718      0.878     38.430      0.282     39.590
+yolo11n_last_tennis_ball_eudyi_xwxjf.onnx     tennis-ball-validation-1_11 cpu        last           0.956749   0.924731   0.970418     0.648106      3.330     55.725     10.211     69.266
+yolo11n_last_t...l_eudyi_xwxjf_openvino_model tennis-ball-validation-1_11 cpu        last           0.956749   0.924731   0.970418     0.648106      0.851     18.692      0.672     20.215
+yolo11n_last_tennis_ball_eudyi_xwxjf.engine   tennis-ball-validation-1_11 cpu        last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+
+yolo11n_last_tennis_ball_eudyi_xwxjf.pt       tennis-ball-validation-1_11 cuda:0     last           0.977313   0.926426   0.971668     0.647677      0.523      2.821      0.891      4.235
+yolo11n_last_tennis_ball_eudyi_xwxjf.onnx     tennis-ball-validation-1_11 cuda:0     last           0.956783   0.924731   0.970360     0.647944      0.650      5.175      0.777      6.602
+yolo11n_last_t...l_eudyi_xwxjf_openvino_model tennis-ball-validation-1_11 cuda:0     last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo11n_last_tennis_ball_eudyi_xwxjf.engine   tennis-ball-validation-1_11 cuda:0     last           0.960809   0.922647   0.970403     0.648106      0.658      2.618      0.743      4.019
+
+CONCLUSION for Legion slim 7:
+yolo11n_my_ds_v2_best.engine  for accuracy, and yolo26n_my_ds_v2_last.engine  for speed on GPU.
+yolo11n_my_ds_v2_last_openvino_model for accuracy, and yolo26n_my_ds_v2_last_openvino_model for speed on CPU.
