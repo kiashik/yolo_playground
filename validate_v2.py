@@ -228,18 +228,18 @@ if __name__ == "__main__":
     ]
 
     # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    # data_yaml = "tennis-ball-validation-1_26/data.yaml"    
-    # print("\n=== Validating YOLO26n on CUDA ===")
-    # perform_validation(my_models_26n, data_yaml, "cuda:0")
+    data_yaml = "tennis-ball-validation-1_26/data.yaml"    
+    print("\n=== Validating YOLO26n on CUDA ===")
+    perform_validation(my_models_26n, data_yaml, "cuda:0")
     # print("\n=== Validating YOLO26n on CPU ===")
     # perform_validation(my_models_26n, data_yaml, "cpu")
     # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
     # # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    data_yaml = "tennis-ball-validation-1_11/data.yaml"    
+    # data_yaml = "tennis-ball-validation-1_11/data.yaml"    
     # print("\n=== Validating YOLO11n on CUDA ===")
     # perform_validation(my_models_11n, data_yaml, "cuda:0")
-    print("\n=== Validating YOLO11n on CPU ===")
-    perform_validation(my_models_11n, data_yaml, "cpu")
+    # print("\n=== Validating YOLO11n on CPU ===")
+    # perform_validation(my_models_11n, data_yaml, "cpu")
     # # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
