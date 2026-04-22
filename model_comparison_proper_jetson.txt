@@ -1,0 +1,32 @@
+
+PERFORMANCE UNDER "25W".
+model                                         dataset_version           device     weights_type  precision     recall      mAP50     mAP50-95   prep(ms)  infer(ms)   post(ms)  total(ms)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+yolo26n_my_ds_v2_best.pt                      tennis-ball-validation-26n cuda:0     best           0.972436   0.924731   0.987218     0.665720      8.494     29.452      0.748     38.695
+yolo26n_my_ds_v2_last.pt                      tennis-ball-validation-26n cuda:0     last           0.958875   0.962366   0.990858     0.657880      5.274     11.815      1.003     18.092
+yolo26n_my_ds_v2_best.engine                  tennis-ball-validation-26n cuda:0     best           0.962133   0.956233   0.990121     0.660895      5.803     16.163      2.850     24.816
+yolo26n_my_ds_v2_last.engine                  tennis-ball-validation-26n cuda:0     last           0.967599   0.963346   0.991852     0.650491      3.624     12.782      2.152     18.559 BEST
+
+
+model                                         dataset_version           device     weights_type  precision     recall      mAP50     mAP50-95   prep(ms)  infer(ms)   post(ms)  total(ms)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+yolo26n_my_ds_v2_best.pt                      tennis-ball-validation-26n cpu        best           0.972430   0.924731   0.987179     0.666320      1.213    281.825      0.165    283.202
+yolo26n_my_ds_v2_last.pt                      tennis-ball-validation-26n cpu        last           0.957367   0.962366   0.990900     0.657952      1.218    254.414      0.168    255.800
+yolo26n_my_ds_v2_best.engine                  tennis-ball-validation-26n cpu        best                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo26n_my_ds_v2_last.engine                  tennis-ball-validation-26n cpu        last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+
+
+PERFORAMNCE UNDER "MAXN POWER"
+model                                         dataset_version           device     weights_type  precision     recall      mAP50     mAP50-95   prep(ms)  infer(ms)   post(ms)  total(ms)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+yolo26n_my_ds_v2_best.pt                      tennis-ball-validation-26n cuda:0     best           0.972436   0.924731   0.987218     0.665720      1.018     11.893      0.599     13.510
+yolo26n_my_ds_v2_last.pt                      tennis-ball-validation-26n cuda:0     last           0.958875   0.962366   0.990858     0.657880      1.538     10.518      0.422     12.477
+yolo26n_my_ds_v2_best.engine                  tennis-ball-validation-26n cuda:0     best           0.962133   0.956233   0.990121     0.660895      2.705     11.865      1.430     16.000
+yolo26n_my_ds_v2_last.engine                  tennis-ball-validation-26n cuda:0     last           0.967599   0.963346   0.991852     0.650491      2.932     12.028      1.385     16.345
+
+model                                         dataset_version           device     weights_type  precision     recall      mAP50     mAP50-95   prep(ms)  infer(ms)   post(ms)  total(ms)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+yolo26n_my_ds_v2_best.pt                      tennis-ball-validation-26n cpu        best           0.972430   0.924731   0.987179     0.666320      1.019    200.818      0.125    201.962
+yolo26n_my_ds_v2_last.pt                      tennis-ball-validation-26n cpu        last           0.957367   0.962366   0.990900     0.657952      1.139    201.800      0.246    203.185
+yolo26n_my_ds_v2_best.engine                  tennis-ball-validation-26n cpu        best                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
+yolo26n_my_ds_v2_last.engine                  tennis-ball-validation-26n cpu        last                N/A        N/A        N/A          N/A        N/A        N/A        N/A        N/A
